@@ -1,0 +1,12 @@
+<div class="overlay" *ngIf="isVisible" [@fadeInOut]>
+  <div class="popup">
+    <h1 class="title">{{title | capitalizeFirst}}</h1>
+    <a class="close" (click)="isVisible = false" [class.hide]="hideX">&times;</a>
+    <div class="content">
+      {{description | capitalizeFirst}}
+    </div>
+    <div *ngIf="textButton">
+      <button type="button" style="float: right; margin-right: 0" (click)="click()">{{textButton | capitalizeFirst }}</button>
+    </div>
+  </div>
+</div>

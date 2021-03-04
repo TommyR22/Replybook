@@ -1,0 +1,234 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+body {
+  margin: 0;
+  background-color: #E8E8E8;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.body {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.body__menu {
+  flex-grow: 1;
+  min-width: 250px;
+  max-width: 250px;
+  background: $menu1;
+}
+
+.body__content {
+  flex-grow: 4;
+}
+
+.toolbar {
+  display: flex;
+  height: $headerSize;
+  background-color: $primary;
+  color: white;
+  font-weight: 600;
+  justify-content: space-between;
+}
+
+.toolbar__left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar__right {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar img {
+  margin: 0 20px 0 0;
+}
+
+
+/*--------------------
+  BUTTON
+ ---------------------*/
+
+.button {
+  background-color: $primary;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: $primary_complementary;
+  color: white;
+}
+
+.button1 {
+  background-color: white;
+  color: #3e3e3e;
+  border: 2px solid $primary;
+  border-radius: 30px;
+}
+
+.button1:hover {
+  background-color: $primary_complementary;
+  color: white;
+}
+.button1:disabled {
+  background-color: #4f9568;
+  opacity: 0.5;
+  color: white;
+}
+
+.button1 .clicked {
+  background-color: $primary_complementary;
+  color: white;
+}
+
+
+.button--filter {
+  background-color: $primary;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 30px;
+  &:hover {
+    background-color: $primary_complementary;
+  }
+}
+
+/*--------------------
+  INPUT TEXT
+ ---------------------*/
+.input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 1px 0;
+  border-color: #dadada;
+  line-height: 26px;
+  &:focus {
+    outline: none;
+    border-color: $primary;
+  }
+}
+.label__input {
+  position: relative;
+  color: $text;
+  cursor: text;
+  transform: translateY(-24px);
+}
+
+/*--------------------
+  SELECT
+ ---------------------*/
+.select-css {
+  display: block;
+  color: $text;
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #dadada;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand {
+  display: none;
+}
+.select-css:hover {
+  border-color: $primary;
+}
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 1px rgba(59, 153, 252, .7);
+  color: $text;
+  outline: none;
+}
+
+select:disabled {
+  background-color: lightgrey;
+}
+
+.button__table {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+
+.button__table--pagination {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.input__container--padding_top {
+  padding-top: 20px;
+}
+
+.fa-sync-alt {
+  cursor: pointer;
+  color: #aaaaaa;
+  &:hover {
+    color: $primary;
+  }
+}
+
+
+input[type=date]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;
+}input[type=time]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   display: none;
+ }
+

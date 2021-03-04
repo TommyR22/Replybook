@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="box-login">
+    <div class="login-container">
+      <div class="left-content">
+        <div class="title">Welcome!</div>
+        <div class="description-text ">Social app with Angular + Strapi CMS
+        </div>
+        <div class="logo">
+          <img src="https://microlancer.lancerassets.com/v2/services/9a/0467503e2611e99171ef3f796485e7/large_Hospital-Isometric.jpg" width="" height="300px" alt="">
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="flex-form">
+          <form>
+            <div class="input__container--padding_top">
+              <label class="label__input" for="username">Username</label>
+              <input id="username" class="input-text" type="text" [(ngModel)]="username" style="width: 100%" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="input__container--padding_top">
+              <label class="label__input" for="password">Password</label>
+              <input id="password" class="input-text" type="password" [(ngModel)]="password" style="width: 100%" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="input__container--padding_top" *ngIf="register">
+              <label class="label__input" for="email">Email</label>
+              <input id="email" class="input-text" type="email" [(ngModel)]="email" style="width: 100%" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div *ngIf="!register" class="link"><a (click)="register = !register">REGISTER</a></div>
+            <div *ngIf="register" class="link"><a (click)="register = !register">SIGN IN</a></div>
+            <div class="link__error">{{error ? error.message[0].messages[0].message : ''}}</div>
+            <button class="button btn1" type="button" style="width: 100%" (click)="access()">{{register ? 'Register' : 'Sign in'}}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
